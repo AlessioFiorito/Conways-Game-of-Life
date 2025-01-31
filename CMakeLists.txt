@@ -11,7 +11,6 @@ find_package(raylib REQUIRED)
 add_executable(Conway_s_Game_of_Life
         src/main.cpp
         src/Grid.cpp
-        src/Cell.cpp
         src/Game.cpp
         src/Renderer.cpp
 )

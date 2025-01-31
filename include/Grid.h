@@ -16,6 +16,9 @@ public:
     void switchCellState(int x, int y);
     void updateGrid();
     void setCellAlive(int x, int y);
+    unsigned int getGridWidth() const { return m_gridWidth; }
+    unsigned int getGridHeight() const { return m_gridHeight; }
+
 
 private:
     std::vector<std::vector<bool>> grid;
