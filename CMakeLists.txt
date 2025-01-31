@@ -2,13 +2,18 @@ cmake_minimum_required(VERSION 3.29)
 project(Conway_s_Game_of_Life)
 
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_executable(Conway_s_Game_of_Life src/main.cpp
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
+find_package(raylib REQUIRED)
+
+add_executable(Conway_s_Game_of_Life
+        src/main.cpp
         src/Grid.cpp
-        include/Grid.h
         src/Cell.cpp
-        include/Cell.h
         src/Game.cpp
-        include/Game.h
         src/Renderer.cpp
-        include/Renderer.h)
+)
+
+target_link_libraries(Conway_s_Game_of_Life raylib)
