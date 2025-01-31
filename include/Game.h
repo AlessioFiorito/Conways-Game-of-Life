@@ -1,16 +1,26 @@
-//
-// Created by Alessio Fiorito on 31.01.2025.
-//
-
 #ifndef GAME_H
 #define GAME_H
 
+#include "Grid.h"
+#include "Renderer.h"
 
-
-class Game {
-
+enum class GameState {
+    PAUSED,
+    SIMULATING
 };
 
+class Game {
+public:
+    Game(unsigned int width, unsigned int height, float cellSize);
+    void run();
 
+private:
+    Grid grid;
+    Renderer renderer;
+    GameState currentState;
 
-#endif //GAME_H
+    void handleInput();
+    void update();
+};
+
+#endif // GAME_H

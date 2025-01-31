@@ -31,6 +31,13 @@ void Grid::switchCellState(int x, int y) {
     }
 }
 
+void Grid::setCellAlive(int x, int y) {
+    if (isValidPosition(x, y)) {
+        grid[y][x] = true;
+    }
+}
+
+
 void Grid::updateGrid() {
     std::vector<std::vector<bool>> tempGrid = grid;
 

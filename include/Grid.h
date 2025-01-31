@@ -18,6 +18,7 @@ public:
     void setCellAlive(int x, int y);
     unsigned int getGridWidth() const { return m_gridWidth; }
     unsigned int getGridHeight() const { return m_gridHeight; }
+    unsigned int getCellSize() const { return m_cellSize; }
 
 
 private:
